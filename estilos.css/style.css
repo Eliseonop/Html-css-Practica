@@ -1,0 +1,211 @@
+* {
+  /* reset */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* guia temporar */
+  /* border: 1px solid rgb(13, 13, 126); */
+  font-family: "Open Sans", sans-serif;
+}
+
+/* empezamos ahcer la cabecera y el inicio */
+header {
+  /* linear-gadient(dreccion */
+  background-image: linear-gradient(45deg, #3dada4, #c71fe6);
+  color: white;
+}
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+nav li {
+  margin: 0 5px;
+}
+button {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  max-height: 40px;
+}
+button:hover {
+  background-color: white;
+  color: gray;
+}
+button:focus {
+  background-color: beige;
+  color: rgb(14, 29, 29);
+}
+.hero {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero h1,
+h5,
+div {
+  margin: 10px;
+}
+
+.hero h1 {
+  font-size: calc(16px + 2vw);
+  text-align: center;
+}
+
+.hero img {
+  max-width: 75vw;
+}
+
+/* tarjetas */
+.caracteristicas {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.caracteristicas h2 {
+  text-align: center;
+}
+
+.tarjetas {
+  display: flex;
+}
+
+.tarjeta {
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: d_ejex d_ejey difuminado color */
+  box-shadow: 0 0 20px gray;
+}
+
+.tarjeta * {
+  margin: 5px 0;
+}
+
+.tarjeta img {
+  width: 60px;
+}
+
+.tarjeta a {
+  text-decoration: none;
+}
+/* numeros enteros, odd(impares) y even(pares) */
+.tarjeta:nth-of-type(2) {
+  background-image: linear-gradient(45deg, #3dada4, #c71fe6);
+  color: white;
+}
+
+.facil_procesos {
+  width: 1200px;
+  height: 700px;
+}
+.contenedor_tres {
+  display: flex;
+  flex-direction: row;
+}
+/* neuva seccions */
+
+.container_simple {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.container_simple h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.container_simple h4 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: gray;
+  }
+
+.contenedor_imagenes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.caja-info h3{
+    font-size: 30px ;
+    margin-top: 40px;
+    font-family:  'Poppins', sans-serif;
+    font-weight: 700;
+
+}
+.caja-info h5{
+    font-size: 13px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.caja-info {
+    border-radius: 15px;
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+.precios{
+    margin-top: 20px;
+    display: flex;
+}
+.number{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 55px;
+    color: #30D7BA;
+}
+.precios div{
+    color: #30D7BA;
+}
+.caja-info ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 10px;
+}
+.caja-info ul li {
+   font-size: 15px;
+   margin: 15px;
+  }
+.caja1 ul li:nth-last-of-type(1), .caja1 ul li:nth-last-of-type(2) {
+    color: gray;
+ }
+ .caja2 ul li:nth-last-of-type(1) {
+    color: gray;
+ }
+.caja-info button {
+  color: white;
+  background-color: #03d6f3;
+  width: 251px;
+  height: 100px;
+  
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .tarjetas {
+    flex-direction: column;
+  }
+  .tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
