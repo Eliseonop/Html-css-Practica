@@ -1,34 +1,41 @@
 * {
-  /* reset */
+  /* RESET */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* guia temporar */
-  /* border: 1px solid rgb(13, 13, 126); */
-  font-family: "Open Sans", sans-serif;
+  /* guía temporal, donde comienza y terminan mis elementos */
+  /* border: 1px solid blue; */
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
-/* empezamos ahcer la cabecera y el inicio */
 header {
-  /* linear-gadient(dreccion */
+  /* linear-gradient(direccion_grados,color1,color2) */
   background-image: linear-gradient(45deg, #3dada4, #c71fe6);
   color: white;
 }
+
 .contenedor {
   max-width: 900px;
+  /* arribayabajo costados */
+  /* auto = navegador tu elige */
   margin: 0 auto;
   display: flex;
+  /* flex-direction:row */
   justify-content: space-between;
   align-items: center;
 }
+
 nav ul {
   display: flex;
+  /* remover viñetas */
   list-style-type: none;
   align-items: center;
 }
+
 nav li {
   margin: 0 5px;
 }
+
 button {
   background-color: transparent;
   border: 1px solid white;
@@ -37,20 +44,23 @@ button {
   color: white;
   max-height: 40px;
 }
+
 button:hover {
+  /* puntero esta encima */
   background-color: white;
-  color: gray;
+  /* 0-255 */
+  /* rgb(rr, gg, bb) */
+  color: rgb(59, 59, 59);
 }
-button:focus {
-  background-color: beige;
-  color: rgb(14, 29, 29);
-}
+
 .hero {
   padding: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+/* al h1, h5 y div dentro de la clase hero le añado un margin de 10px */
 .hero h1,
 h5,
 div {
@@ -104,57 +114,46 @@ div {
   background-image: linear-gradient(45deg, #3dada4, #c71fe6);
   color: white;
 }
-
-.facil_procesos {
-  width: 1200px;
-  height: 700px;
-}
-.contenedor_tres {
-  display: flex;
-  flex-direction: row;
-}
 /* neuva seccions */
 
 .container_simple {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px;
 }
 .container_simple h2 {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 50px;
   margin-bottom: 15px;
 }
 .container_simple h4 {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 25px;
-    font-size: 16px;
-    color: gray;
-  }
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: gray;
+}
 
 .contenedor_imagenes {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
-.caja-info h3{
-    font-size: 30px ;
-    margin-top: 40px;
-    font-family:  'Poppins', sans-serif;
-    font-weight: 700;
-
+.caja-info h3 {
+  font-size: 30px;
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
-.caja-info h5{
-    font-size: 13px;
-    color: gray;
-    font-family: Arial, Helvetica, sans-serif;
-
+.caja-info h5 {
+  font-size: 13px;
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .caja-info {
-    border-radius: 15px;
+  border-radius: 15px;
   width: 335px;
   display: flex;
   flex-direction: column;
@@ -162,17 +161,18 @@ div {
   border: 1px solid gray;
 }
 
-.precios{
-    margin-top: 20px;
-    display: flex;
+.precios {
+  margin-top: 20px;
+  display: flex;
 }
-.number{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 55px;
-    color: #30D7BA;
+.number {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 55px;
+  color: #30d7ba;
 }
-.precios div{
-    color: #30D7BA;
+.precios div {
+  color: #30d7ba;
 }
 .caja-info ul {
   list-style-type: none;
@@ -180,24 +180,49 @@ div {
   margin: 10px;
 }
 .caja-info ul li {
-   font-size: 15px;
-   margin: 15px;
-  }
-.caja1 ul li:nth-last-of-type(1), .caja1 ul li:nth-last-of-type(2) {
-    color: gray;
- }
- .caja2 ul li:nth-last-of-type(1) {
-    color: gray;
- }
+  font-size: 15px;
+  margin: 15px;
+}
+.caja1 ul li:nth-last-of-type(1),
+.caja1 ul li:nth-last-of-type(2) {
+  color: gray;
+}
+.caja2 ul li:nth-last-of-type(1) {
+  color: gray;
+}
 .caja-info button {
   color: white;
   background-color: #03d6f3;
   width: 251px;
   height: 100px;
-  
-   margin-top: 20px;
-   margin-bottom: 20px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+/* MENU */
+
+/* Menú */
+
+#check {
+  /* esconde solo visualmente, pero esta en el dom */
+  visibility: hidden;
+  position: absolute;
+  z-index: -99;
+}
+
+.show-menu-btn,
+.hide-menu-btn {
+  cursor: pointer;
+  font-size: 30px;
+  display: none;
+}
+
+.menu {
+  transition-duration: 0.5s;
+}
+
+/* MEDIAQUERIES */
+
 
 @media screen and (max-width: 768px) {
   .tarjetas {
@@ -207,5 +232,51 @@ div {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .contenedor_imagenes{
+    
+    flex-direction: column;
+    
+  }
+  .caja-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width: 572px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #c71fe6;
+    flex-direction: column;
+    padding: 100px 0;
+    right: -100%;
+  }
+
+  .menu li {
+    padding: 20px 0;
+    font-size: 24px;
+  }
+
+  .hide-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  .hide-menu-btn,
+  .show-menu-btn {
+    display: block;
+  }
+
+  /* :checked hace referencia si el check esta activo ✔ */
+  /* ~ este símbolo hara referencia a los elementos después de check en la estructura, en este caso, .menú */
+  #check:checked ~ .menu {
+    right: 0;
   }
 }
